@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% from 'macroses/_macros.html' import hello %}
+{% from 'macroses/_macros.html' import displayNumbers %}
+{# {% import 'macroses/_macros.html' as test_macro %} #}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block page_content %}
+	
+	{{ hello(name) }}
+
+	{{ displayNumbers(numbers) }}
+
+	<hr>
+
+	{{ displayNumbers(moreNumbers) }}
+
+	{# {{ test_macro.displayNumbers(numbers) }} #}
+
+{% endblock %}	
+
+</body>
+</html>

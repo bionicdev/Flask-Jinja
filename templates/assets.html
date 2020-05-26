@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+
+{% assets 'main_css' %} 
+	<link rel="stylesheet" href="{{ ASSET_URL }}">
+{% endassets %}
+
+{% endblock %}
+
+{% block page_content %}
+
+{#
+<script src="{{ url_for('static', filename='home.js') }}"></script>
+<script src="{{ url_for('static', filename='add.js') }}"></script>
+<script src="{{ url_for('static', filename='subtract.js') }}"></script>
+#}
+
+{% assets 'main_js' %} 
+	<script src="{{ ASSET_URL }}"></script>
+{% endassets %}
+
+{% endblock %}

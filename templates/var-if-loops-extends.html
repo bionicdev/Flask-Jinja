@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block page_content %}
+
+	<h1>Hello, {{ names.name }}</h1>
+
+	{% if lang %}
+
+		<p>The language you are using is {{ language }}</p>
+
+	{% else %}
+
+		<p>The Framework you are using is {{ framework }}</p>
+
+	{% endif %}
+
+	{% for item in items %}
+		
+		<p>{{item.text}}</p>
+
+	{% endfor %}
+
+{% endblock %}

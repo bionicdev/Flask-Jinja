@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block page_content %}
+	
+	{{ myVar|abs }} <br>
+	{{ testVar|default('variable is empty') }} <br>
+	{{ testVar|capitalize }} <br>
+	{{ testVar|upper }} {# testVar|lower #} <br>
+	{{ myDict|pprint }} <br>
+	{{ myNumberList }} <br>
+	{{ myFunction(1) }} <br>
+	{{ myNumber|customFilter(4) }} <br>
+	{{ myNumber|customFilter2(4) }} <br>
+	{{ testVar|reverse }} <br>
+
+{% endblock %}

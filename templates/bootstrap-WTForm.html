@@ -1,0 +1,27 @@
+{% extends "bootstrap/base.html" %}
+
+{% from "_formhelpers.html" import render_field %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %} WTForms {% endblock %}
+
+{% block content %}
+
+	<div class="container">
+	    <form method="POST" action="/">
+			<dl>
+
+				{{ form.csrf_token }}
+				{{ render_field(form.username) }}
+				{{ render_field(form.password) }}
+
+				{# {{ wtf.quick_form(form)}} #}
+
+				<input class="btn btn-primary" type="submit" value="Login">
+			
+			</dl>
+	    </form>
+	</div>
+
+{% endblock %}
